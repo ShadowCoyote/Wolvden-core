@@ -1,0 +1,492 @@
+/* Moonlit Hunter V2.1 — Transparent Glass — Wolvden Light Mode — Core
+   Uses the original full-size cover background.
+   Upload alongside moonlit-hunter-background.jpeg in your GitHub repository.
+*/
+
+:root{
+  --bg:#07101a;
+  --panel:rgba(8,17,28,.58);
+  --panel2:rgba(17,31,47,.56);
+  --panel-soft:rgba(24,42,61,.48);
+  --border:rgba(196,224,247,.58);
+  --border-soft:rgba(178,213,241,.28);
+  --text:#f0f7ff;
+  --muted:#bed0df;
+  --link:#a9dcff;
+  --accent:#79bcef;
+  --accent-soft:#d6ebfb;
+  --gold:#d8c18d;
+}
+
+html{
+  min-height:100%;
+  background:var(--bg);
+}
+
+body.theme_default{
+  min-height:100vh!important;
+  color:var(--text)!important;
+  background:
+    radial-gradient(circle at 50% 22%,rgba(111,168,212,.10),transparent 34%),
+    linear-gradient(rgba(3,7,13,.28),rgba(3,7,13,.72)),
+    url("https://raw.githubusercontent.com/ShadowCoyote/Wolvden-core/refs/heads/main/moonlit-hunter-background.jpeg")
+    center top/cover fixed no-repeat!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+}
+
+body.theme_default>.container:not(#header):not(#footer){
+  background:transparent!important;
+}
+
+body.theme_default,
+body.theme_default p,
+body.theme_default div,
+body.theme_default span,
+body.theme_default li,
+body.theme_default td,
+body.theme_default label{
+  color:var(--text);
+}
+
+body.theme_default small,
+body.theme_default .text-muted,
+body.theme_default .form-text{
+  color:var(--muted)!important;
+}
+
+body.theme_default a{
+  color:var(--link)!important;
+}
+
+body.theme_default a:hover{
+  color:#fff!important;
+  text-shadow:0 0 8px rgba(158,215,255,.55);
+}
+
+body.theme_default h1,
+body.theme_default h2,
+body.theme_default h3,
+body.theme_default h4,
+body.theme_default h5,
+body.theme_default h6{
+  color:#f7fbff!important;
+  text-shadow:0 2px 8px #000;
+}
+
+body.theme_default h1{
+  padding:.45rem .8rem;
+  border-left:4px solid #b9ddff;
+  background:linear-gradient(90deg,rgba(12,25,39,.9),transparent);
+}
+
+body.theme_default #header,
+body.theme_default #footer{
+  background:rgba(5,10,18,.93)!important;
+  border:1px solid var(--border);
+  border-radius:12px;
+  box-shadow:0 12px 35px rgba(0,0,0,.6);
+  overflow:hidden;
+}
+
+body.theme_default #header{
+  margin-top:.65rem;
+  padding:0;
+}
+
+body.theme_default #header .navbar-main{
+  background:linear-gradient(90deg,rgba(8,18,30,.98),rgba(31,52,73,.9))!important;
+  border-bottom:1px solid var(--border);
+}
+
+body.theme_default #header .navbar-status,
+body.theme_default .breadcrumb-nav,
+body.theme_default .breadcrumb{
+  background:rgba(8,15,25,.95)!important;
+}
+
+body.theme_default #header .nav-link,
+body.theme_default #header .navbar-text,
+body.theme_default #header button{
+  color:#f3f8ff!important;
+}
+
+body.theme_default #header .navbar-main .nav-link:hover{
+  background:rgba(120,184,238,.16)!important;
+  border-radius:7px;
+}
+
+body.theme_default .dropdown-menu{
+  background:#0b1724!important;
+  border:1px solid var(--border);
+}
+
+body.theme_default .dropdown-item{
+  color:var(--text)!important;
+}
+
+body.theme_default .dropdown-item:hover{
+  background:rgba(119,184,239,.18)!important;
+}
+
+body.theme_default #main{
+  padding:1rem 1.15rem 1.4rem;
+  background:linear-gradient(145deg,rgba(7,14,24,.52),rgba(13,26,41,.46))!important;
+  backdrop-filter:blur(6px) saturate(108%);
+  -webkit-backdrop-filter:blur(6px) saturate(108%);
+  border:1px solid var(--border);
+  border-radius:12px;
+  box-shadow:0 18px 45px rgba(0,0,0,.62);
+}
+
+body.theme_default #fraProfileHTML{
+  padding:1rem 1.1rem;
+  margin-bottom:1rem;
+  background:linear-gradient(145deg,var(--panel2),rgba(8,18,30,.50))!important;
+  backdrop-filter:blur(7px) saturate(108%);
+  -webkit-backdrop-filter:blur(7px) saturate(108%);
+  border:1px solid var(--border);
+  border-radius:12px;
+  box-shadow:0 10px 24px rgba(0,0,0,.4);
+}
+
+body.theme_default .card{
+  background:linear-gradient(145deg,var(--panel),rgba(20,37,55,.50))!important;
+  border:1px solid var(--border)!important;
+  backdrop-filter:blur(6px) saturate(108%);
+  -webkit-backdrop-filter:blur(6px) saturate(108%);
+  border-radius:12px!important;
+  box-shadow:0 10px 25px rgba(0,0,0,.42);
+}
+
+body.theme_default .card-body{
+  background:transparent!important;
+  color:var(--text)!important;
+}
+
+body.theme_default .card-title{
+  color:#edf7ff!important;
+  border-bottom:1px solid rgba(180,215,244,.25);
+  padding-bottom:.4rem;
+}
+
+body.theme_default .bg-light{
+  background:var(--panel)!important;
+}
+
+body.theme_default .table{
+  color:var(--text)!important;
+  background:var(--panel)!important;
+  border:1px solid var(--border)!important;
+  border-collapse:separate;
+  border-spacing:0;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+body.theme_default .table th,
+body.theme_default .table th.top{
+  color:#fff!important;
+  background:linear-gradient(90deg,#172b42,#2a4a66)!important;
+  border-color:rgba(190,220,245,.25)!important;
+}
+
+body.theme_default .table td{
+  color:var(--text)!important;
+  background:rgba(10,18,29,.75)!important;
+  border-color:rgba(180,215,244,.15)!important;
+}
+
+body.theme_default .table-hover tbody tr:hover td{
+  background:rgba(45,72,98,.7)!important;
+}
+
+body.theme_default .alert{
+  color:var(--text)!important;
+  border:1px solid var(--border)!important;
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(0,0,0,.34);
+}
+
+body.theme_default .alert-info{background:rgba(24,58,85,.9)!important}
+body.theme_default .alert-success{background:rgba(31,79,69,.9)!important}
+body.theme_default .alert-warning{background:rgba(104,82,36,.92)!important}
+body.theme_default .alert-danger{background:rgba(94,39,48,.92)!important}
+
+body.theme_default .nav-tabs{
+  border-bottom:1px solid var(--border)!important;
+}
+
+body.theme_default .nav-tabs .nav-link{
+  background:rgba(8,15,25,.82)!important;
+  border-color:rgba(180,215,244,.22)!important;
+}
+
+body.theme_default .nav-tabs .nav-link.active{
+  color:#fff!important;
+  background:rgba(36,61,88,.96)!important;
+  border-color:var(--border) var(--border) transparent!important;
+}
+
+body.theme_default .btn{
+  color:#fff!important;
+  background:linear-gradient(#3b6c97,#244967)!important;
+  border:1px solid rgba(205,232,255,.85)!important;
+  border-radius:8px!important;
+  box-shadow:0 5px 13px rgba(0,0,0,.35);
+}
+
+body.theme_default .btn-success{background:linear-gradient(#4d8478,#2e5e54)!important}
+body.theme_default .btn-info{background:linear-gradient(#477f9f,#2c5872)!important}
+body.theme_default .btn-danger{background:linear-gradient(#9d5c65,#6c3e46)!important}
+
+body.theme_default .btn:hover{
+  filter:brightness(1.16);
+  transform:translateY(-1px);
+}
+
+body.theme_default .form-control,
+body.theme_default input,
+body.theme_default textarea,
+body.theme_default select{
+  color:#fff!important;
+  background:rgba(7,14,23,.95)!important;
+  border:1px solid rgba(180,215,244,.52)!important;
+  border-radius:7px!important;
+}
+
+body.theme_default .form-control:focus,
+body.theme_default input:focus,
+body.theme_default textarea:focus,
+body.theme_default select:focus{
+  border-color:#b9ddff!important;
+  box-shadow:0 0 0 .2rem rgba(119,184,239,.22)!important;
+}
+
+body.theme_default option{
+  background:#101c2b;
+  color:#fff;
+}
+
+body.theme_default .progress{
+  background:#07101a!important;
+  border:1px solid rgba(180,215,244,.3);
+  border-radius:10px;
+}
+
+body.theme_default #sidebar img,
+body.theme_default #main img{
+  max-width:100%;
+}
+
+body.theme_default #card-user img,
+body.theme_default .group-banner img,
+body.theme_default .table img{
+  border-radius:7px;
+  box-shadow:0 5px 16px rgba(0,0,0,.45);
+}
+
+body.theme_default #footer{
+  margin-top:1.2rem;
+  margin-bottom:1rem;
+  padding-top:1rem;
+}
+
+body.theme_default #footer .copyright{
+  color:var(--muted)!important;
+  text-align:center;
+}
+
+body.theme_default ::-webkit-scrollbar{
+  width:11px;
+  height:11px;
+}
+
+body.theme_default ::-webkit-scrollbar-track{
+  background:#08101a;
+}
+
+body.theme_default ::-webkit-scrollbar-thumb{
+  background:linear-gradient(#5d89ad,#2e506c);
+  border:2px solid #08101a;
+  border-radius:999px;
+}
+
+@media(max-width:991.98px){
+  body.theme_default{
+    background-attachment:scroll!important;
+    background-position:43% top!important;
+  }
+
+  body.theme_default #header,
+  body.theme_default #main,
+  body.theme_default #footer{
+    border-radius:0;
+  }
+
+  body.theme_default #main{
+    margin-top:.8rem;
+  }
+}
+
+/* ---------------- Moonlit Hunter V2 refinements ---------------- */
+
+body.theme_default #header,
+body.theme_default #main,
+body.theme_default #footer,
+body.theme_default #fraProfileHTML,
+body.theme_default .card,
+body.theme_default .table{
+  position:relative;
+}
+
+body.theme_default #header::before,
+body.theme_default #main::before,
+body.theme_default #footer::before,
+body.theme_default #fraProfileHTML::before,
+body.theme_default .card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  border-radius:inherit;
+  background:linear-gradient(135deg,rgba(255,255,255,.08),transparent 28%,transparent 72%,rgba(139,199,241,.05));
+  opacity:.75;
+}
+
+body.theme_default #main{
+  border-color:rgba(214,235,251,.78);
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.62),
+    inset 0 1px 0 rgba(255,255,255,.07);
+}
+
+body.theme_default .card,
+body.theme_default .table,
+body.theme_default #fraProfileHTML{
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.43),
+    inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+body.theme_default h1,
+body.theme_default h2,
+body.theme_default h3{
+  letter-spacing:.025em;
+}
+
+body.theme_default h1{
+  border-left:4px solid var(--accent-soft);
+  border-bottom:1px solid rgba(196,224,247,.22);
+  border-radius:0 9px 9px 0;
+  background:
+    linear-gradient(90deg,rgba(18,38,58,.96),rgba(34,63,88,.42) 58%,transparent);
+}
+
+body.theme_default h2,
+body.theme_default h3{
+  color:#f4f9ff!important;
+}
+
+body.theme_default .card-title,
+body.theme_default .table th,
+body.theme_default .table th.top{
+  letter-spacing:.035em;
+}
+
+body.theme_default .card-title{
+  color:#f4f9ff!important;
+  border-bottom:1px solid var(--border-soft);
+}
+
+body.theme_default .table tbody tr:nth-child(even) td{
+  background:rgba(17,30,46,.78)!important;
+}
+
+body.theme_default .table td:first-child{
+  border-left-color:transparent!important;
+}
+
+body.theme_default .btn{
+  font-weight:600;
+  letter-spacing:.015em;
+  background:linear-gradient(180deg,#497fa9,#294d6c)!important;
+  box-shadow:
+    0 6px 15px rgba(0,0,0,.38),
+    inset 0 1px 0 rgba(255,255,255,.18);
+}
+
+body.theme_default .btn:hover{
+  color:#fff!important;
+  border-color:#e1f1ff!important;
+}
+
+body.theme_default .badge,
+body.theme_default .badge-pill{
+  color:#f7fbff!important;
+  background:linear-gradient(180deg,rgba(66,111,149,.96),rgba(34,67,94,.96))!important;
+  border:1px solid rgba(213,235,252,.52);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12);
+}
+
+body.theme_default hr{
+  border:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(193,225,249,.6),transparent);
+}
+
+body.theme_default blockquote{
+  padding:.75rem 1rem;
+  background:rgba(16,31,47,.72);
+  border-left:3px solid var(--accent);
+  border-radius:0 9px 9px 0;
+}
+
+body.theme_default a:not(.btn):not(.nav-link){
+  text-decoration-color:rgba(169,220,255,.34);
+  text-underline-offset:2px;
+}
+
+body.theme_default a:not(.btn):not(.nav-link):hover{
+  text-decoration-color:rgba(255,255,255,.8);
+}
+
+body.theme_default #sidebar .card-header,
+body.theme_default #main .card-header{
+  color:#f4f9ff!important;
+  background:linear-gradient(90deg,rgba(30,58,82,.96),rgba(21,40,59,.88))!important;
+  border-bottom:1px solid rgba(199,226,248,.32)!important;
+}
+
+body.theme_default .pagination .page-link{
+  color:#dff1ff!important;
+  background:rgba(10,22,35,.92)!important;
+  border-color:rgba(191,222,246,.32)!important;
+}
+
+body.theme_default .pagination .page-item.active .page-link{
+  color:#07101a!important;
+  background:#b9ddff!important;
+  border-color:#d8efff!important;
+}
+
+body.theme_default ::selection{
+  color:#07101a;
+  background:#cde9ff;
+}
+
+@media(max-width:767.98px){
+  body.theme_default #main{
+    padding:.8rem;
+  }
+
+  body.theme_default h1{
+    font-size:1.55rem;
+  }
+
+  body.theme_default .card,
+  body.theme_default .table,
+  body.theme_default #fraProfileHTML{
+    border-radius:9px!important;
+  }
+}
