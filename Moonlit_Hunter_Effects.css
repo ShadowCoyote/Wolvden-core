@@ -1,0 +1,15 @@
+/* Moonlit Hunter — Wolvden Light Mode — File 2 of 2 */
+body.theme_default .card,body.theme_default .table,body.theme_default .alert,body.theme_default .btn,body.theme_default .nav-tabs .nav-link{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,filter .18s ease}
+body.theme_default #sidebar .card:hover,body.theme_default #main .card:hover{transform:translateY(-2px);border-color:rgba(220,239,255,.95)!important;box-shadow:0 14px 30px rgba(0,0,0,.5),0 0 18px rgba(113,180,235,.22)}
+body.theme_default .btn:hover{box-shadow:0 8px 18px rgba(0,0,0,.44),0 0 15px rgba(128,192,244,.3)}
+body.theme_default #fraProfileHTML::after{content:"✦  🐾  ✦";display:block;margin-top:.8rem;color:#b9ddff;text-align:center;letter-spacing:.35rem;opacity:.82}
+body.theme_default h2::after,body.theme_default #main>h3::after{content:"  ✦";color:#9ed5ff;font-size:.72em;opacity:.8}
+
+@keyframes mh-shimmer{0%{background-position:-160% 0}100%{background-position:260% 0}}
+body.theme_default .table th,body.theme_default .card-title{background-image:linear-gradient(110deg,transparent 0,transparent 39%,rgba(215,238,255,.08) 47%,rgba(215,238,255,.23) 50%,rgba(215,238,255,.08) 53%,transparent 61%,transparent 100%);background-size:220% 100%;animation:mh-shimmer 12s linear infinite}
+
+@keyframes mh-mist{from{transform:translate3d(-4%,0,0)}to{transform:translate3d(4%,0,0)}}
+body.theme_default::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 15% 55%,rgba(226,239,250,.08),transparent 36%),radial-gradient(ellipse at 72% 65%,rgba(189,221,245,.07),transparent 42%);filter:blur(18px);animation:mh-mist 18s ease-in-out infinite alternate}
+
+body.theme_default a:focus-visible,body.theme_default button:focus-visible,body.theme_default input:focus-visible,body.theme_default textarea:focus-visible,body.theme_default select:focus-visible{outline:2px solid #c9e7ff!important;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){body.theme_default *,body.theme_default *::before,body.theme_default *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
