@@ -1,0 +1,150 @@
+/* Moonlit Hunter V2 — Wolvden Light Mode — Effects
+   Load this after Moonlit_Hunter_V2_Core.css.
+*/
+
+/* Smooth interaction polish */
+body.theme_default .card,
+body.theme_default .table,
+body.theme_default .alert,
+body.theme_default .btn,
+body.theme_default .nav-tabs .nav-link,
+body.theme_default .pagination .page-link{
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease,
+    filter .2s ease,
+    background-color .2s ease;
+}
+
+body.theme_default #sidebar .card:hover,
+body.theme_default #main .card:hover{
+  transform:translateY(-2px);
+  border-color:rgba(225,241,255,.95)!important;
+  box-shadow:
+    0 16px 34px rgba(0,0,0,.52),
+    0 0 19px rgba(117,187,239,.20),
+    inset 0 1px 0 rgba(255,255,255,.07);
+}
+
+body.theme_default .btn:hover{
+  transform:translateY(-1px);
+  box-shadow:
+    0 9px 20px rgba(0,0,0,.45),
+    0 0 16px rgba(128,194,244,.28),
+    inset 0 1px 0 rgba(255,255,255,.22);
+}
+
+/* Paw-print dividers */
+body.theme_default #fraProfileHTML::after{
+  content:"✦  🐾  ✦";
+  display:block;
+  margin-top:.9rem;
+  color:#c4e3fa;
+  text-align:center;
+  letter-spacing:.4rem;
+  opacity:.84;
+}
+
+body.theme_default h2::after,
+body.theme_default #main>h3::after{
+  content:"  ✦";
+  color:#9ed8ff;
+  font-size:.72em;
+  opacity:.82;
+}
+
+/* Slow glass shimmer */
+@keyframes mhv2-shimmer{
+  0%{background-position:-170% 0}
+  100%{background-position:270% 0}
+}
+
+body.theme_default .table th,
+body.theme_default .card-title{
+  background-image:
+    linear-gradient(
+      110deg,
+      transparent 0,
+      transparent 40%,
+      rgba(224,242,255,.07) 47%,
+      rgba(224,242,255,.22) 50%,
+      rgba(224,242,255,.07) 53%,
+      transparent 60%,
+      transparent 100%
+    );
+  background-size:230% 100%;
+  animation:mhv2-shimmer 14s linear infinite;
+}
+
+/* Soft drifting mist */
+@keyframes mhv2-mist{
+  0%{transform:translate3d(-5%,0,0) scale(1.02)}
+  100%{transform:translate3d(5%,1%,0) scale(1.06)}
+}
+
+body.theme_default::before{
+  content:"";
+  position:fixed;
+  inset:-5%;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 14% 56%,rgba(226,240,251,.08),transparent 34%),
+    radial-gradient(ellipse at 76% 67%,rgba(187,221,247,.07),transparent 41%),
+    linear-gradient(90deg,transparent,rgba(203,231,250,.025),transparent);
+  filter:blur(20px);
+  animation:mhv2-mist 22s ease-in-out infinite alternate;
+}
+
+/* Very subtle star glints */
+@keyframes mhv2-stars{
+  0%,100%{opacity:.20}
+  50%{opacity:.48}
+}
+
+body.theme_default::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 13% 17%,rgba(255,255,255,.72) 0 1px,transparent 1.8px),
+    radial-gradient(circle at 34% 9%,rgba(215,238,255,.58) 0 1px,transparent 1.7px),
+    radial-gradient(circle at 68% 14%,rgba(255,255,255,.62) 0 1px,transparent 1.8px),
+    radial-gradient(circle at 87% 26%,rgba(205,232,252,.54) 0 1px,transparent 1.7px);
+  animation:mhv2-stars 7s ease-in-out infinite;
+}
+
+/* Page entrance */
+@keyframes mhv2-fade-in{
+  from{opacity:0;transform:translateY(5px)}
+  to{opacity:1;transform:none}
+}
+
+body.theme_default #main,
+body.theme_default #sidebar{
+  animation:mhv2-fade-in .55s ease both;
+}
+
+/* Accessible focus */
+body.theme_default a:focus-visible,
+body.theme_default button:focus-visible,
+body.theme_default input:focus-visible,
+body.theme_default textarea:focus-visible,
+body.theme_default select:focus-visible{
+  outline:2px solid #d2ecff!important;
+  outline-offset:2px;
+}
+
+/* Respect motion preferences */
+@media(prefers-reduced-motion:reduce){
+  body.theme_default *,
+  body.theme_default *::before,
+  body.theme_default *::after{
+    animation-duration:.001ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.001ms!important;
+  }
+}
